@@ -22,6 +22,9 @@
 .tc {
   text-align: center; }
 
+.section {
+  border-top: 2px solid #f4f4f4; }
+
 * {
   padding: 0;
   margin: 0;
@@ -76,6 +79,8 @@ a {
         border-bottom: 2px solid #4834d4; }
         .main-header ul li:first-child:focus {
           color: #f4f4f4; }
+      .main-header ul li .fa {
+        margin-left: 0.25em; }
   .main-header .header-title {
     color: #f7f7f7;
     direction: ltr; }
@@ -139,23 +144,74 @@ a {
     font-size: 1.3rem;
     font-weight: bold; }
 
-@media (max-width: 567px) {
-  .header-title {
-    font-size: 1.5rem;
-    opacity: 0; } }
+footer {
+  color: #f4f4f4;
+  background: #333;
+  padding: 1rem;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  footer .cuntact-us {
+    display: flex; }
+    footer .cuntact-us .fa {
+      font-size: 1.2rem;
+      border-radius: 100vw;
+      border: 2px solid #f4f4f4;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin: 1em; }
+  footer .copywrite {
+    font-size: 1.1rem;
+    padding-right: 3%; }
 
-@media (max-width: 950px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .section-2 {
-    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+    .section-2-img {
+      height: auto; }
+  .section-3 {
+    background-color: #4834d4;
+    margin-top: 35vh;
+    padding: 10rem;
+    grid-template-columns: 1fr; } }
+
+@media (max-width: 768px) {
+  .main-header {
+    justify-content: center; }
+  .header-title {
+    opacity: 0; }
+  .section-2 {
+    grid-gap: 2%;
+    justify-content: center; }
+  .section-2_img {
+    height: auto; }
+  .section-3 {
+    margin-top: 45vh;
+    grid-template-columns: 1fr; }
+  footer {
+    justify-content: center; }
+    footer .cuntact-us {
+      margin-bottom: 0.5rem; } }
+
+@media (max-width: 600px) {
+  .section-2 {
+    grid-template-columns: 1fr; }
+  .section-3 {
+    grid-template-columns: 1fr;
+    margin-top: 45vh;
+    padding: 0; } }
+
+@media (max-width: 768px) {
+  .section-2 {
     grid-template-columns: 80%;
     grid-gap: 2%;
     justify-content: center; }
   .section-2_img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.5em 0.5em 0 0;
-    border-bottom: 1px solid #e4e4e4c7; }
+    height: auto; }
   .section-3 {
-    margin-top: 40vh;
-    grid-template-columns: 1fr;
-    padding: 0 2rem; } }
+    padding: 3rem; } }
